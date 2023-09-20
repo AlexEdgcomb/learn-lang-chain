@@ -1,2 +1,5 @@
 langchain
 openai
+tiktoken
+datasets
+apache_beam
