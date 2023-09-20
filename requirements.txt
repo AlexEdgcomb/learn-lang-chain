@@ -3,3 +3,4 @@ openai
 tiktoken
 datasets
 apache_beam
+"pinecone-client[grpc]"

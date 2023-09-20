@@ -7,6 +7,12 @@ Ch1 - 5
 
 Got OpenAPI API key from https://platform.openai.com/account/api-keys
 
+Got Pinecone API key via:
+1. Go to https://app.pinecone.io/
+2. Continue with Google
+3. Clicked alex.edgcomb@zybooks.com account
+4. Click API Keys
+
 ## TODO
 
 - [x] ch1: An Introduction to LangChain
@@ -29,8 +35,11 @@ Got OpenAPI API key from https://platform.openai.com/account/api-keys
         * ConversationBufferWindowMemory: Like ConversationBufferMemory, but only remember the last k interactions {query + response)
         * ConversationSummaryBufferMemory: Like ConversationSummaryMemory, but only remember the last k tokens
         * Other types exist
-- [ ] ch5: Retrieval augmentation
+- [x] ch5: Retrieval augmentation
     * Parametric knowledge: Data the LLM was trained on originally
     * Source knowledge: Data passed to LLM via prompt
-    * Convert text data into chunks (a chunk is a list of tokens) via RecursiveCharacterTextSplitter
-    * Convert chunks into numerical representations that are readable by an LLM
+    * Chunker: Convert text data into chunks (a chunk is a list of tokens) via RecursiveCharacterTextSplitter
+    * Vectorizer: Convert each chunk into a vector (a numerical representation that is readable by an LLM) via OpenAIEmbeddings
+    * Indexer: Store each vector in a vector database
+    * Query LLM w/ vector database via RetrievalQA
+        * Can require LLM to cite sources via RetrievalQAWithSourcesChain
